@@ -7,7 +7,7 @@ public class Main {
         Scanner sc =new Scanner(System.in);
         List<Student> list=new ArrayList<>();
         while (true){System.out.println("======================== 学生信息管理系统 ======================== \n" +
-                "1. 添加学生 \n" +
+                "1. 添加学生1 \n" +
                 "2. 查看所有学生 \n" +
                 " 3. 查询学生 \n" +
                 "4. 修改学生 \n" +
