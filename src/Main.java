@@ -23,7 +23,7 @@ public class Main {
                     String sname =sc.next();
                     System.out.println("请输入年龄");
                     int sage=sc.nextInt();
-                    System.out.println("请输入成绩1");
+                    System.out.println("请输入成绩");
                     double sscore = sc.nextDouble();
                     Student s1 =new Student(scode,sname,sage,sscore);
                     list.add(s1);
