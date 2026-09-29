@@ -30,7 +30,11 @@ public class Main {
                     System.out.println(s1);
                     System.out.println(list);
                 break;
-                case 2: System.out.println("查看所有学生");break;
+                case 2: System.out.println("查看所有学生");
+                for (Student student:list){
+                    System.out.println(student);
+                }
+                break;
                 case 3: System.out.println("查询学生");break;
                 case 4: System.out.println("修改学生");break;
                 case 5: System.out.println("删除学生");break;
