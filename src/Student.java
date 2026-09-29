@@ -21,6 +21,6 @@ public class Student {
     public void setScore(double score) {this.score = score;}
     @Override
     public String toString() {
-        return "学号=" + studentcode + " 姓名=" + studentname + "年龄=" + age+"成绩=" + score;
+        return"学号"+studentcode+"姓名"+studentname+"年龄"+age+"成绩"+score;
     }
 }
