@@ -25,12 +25,16 @@ public class Main {
                     int sage=sc.nextInt();
                     System.out.println("请输入成绩");
                     double sscore = sc.nextDouble();
-                    Student s1 =new Student(scode,sname,sage,sscore);
-                    list.add(s1);
-                    System.out.println(s1);
+                    Student s =new Student(scode,sname,sage,sscore);
+                    list.add(s);
+                    System.out.println(s);
                     System.out.println(list);
                 break;
-                case 2: System.out.println("查看所有学生");break;
+                case 2: System.out.println("查看所有学生");
+                    for (Student student:list){
+                        System.out.println(student);
+                    }
+                break;
                 case 3: System.out.println("查询学生");break;
                 case 4: System.out.println("修改学生");break;
                 case 5: System.out.println("删除学生");break;
