@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Student {
     private long studentcode;
     private String studentname;
@@ -23,4 +25,5 @@ public class Student {
     public String toString() {
         return"学号"+studentcode+"姓名"+studentname+"年龄"+age+"成绩"+score;
     }
+    Scanner sc=new Scanner(System.in);
 }

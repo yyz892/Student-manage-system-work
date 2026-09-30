@@ -19,6 +19,16 @@ public class Main {
                 case 1: System.out.println("添加学生");
                     System.out.println("请输入学生学号");
                     long scode = sc.nextLong();
+                    int count1=0;
+                    for (Student student:list){
+                    if (student.getStudentcode()==scode){
+                       count1++;
+                    }
+                    }
+                    if (count1>0){
+                        System.out.println("学号重复 退出程序");
+                    break;
+                }else {
                     System.out.println("请输入姓名");
                     String sname =sc.next();
                     System.out.println("请输入年龄");
@@ -27,7 +37,8 @@ public class Main {
                     double sscore = sc.nextDouble();
                     Student s1 =new Student(scode,sname,sage,sscore);
                     list.add(s1);
-                break;
+                }
+                    break;
                 case 2: System.out.println("查看所有学生");
                 for (Student student:list){
                     System.out.println(student);
@@ -49,6 +60,34 @@ public class Main {
                 case 4: System.out.println("修改学生");
                     System.out.println("请输入要修改学生的学号");
                     long alternumber = sc.nextLong();
+                    for (Student student:list){
+                        if (alternumber== student.getStudentcode()){
+                        System.out.println("请选择要修改的属性\n"+
+                                "1 姓名\n"+
+                                "2 年龄\n"+
+                                "3 成绩\n");
+                        int alterimport =sc.nextInt();
+                        switch (alterimport){
+                            case 1 :
+                                System.out.println("请输入要修改的姓名");
+                                String altername=sc.next();
+                                student.setStudentname(altername);
+                                break;
+                            case 2 :
+                                System.out.println("请输入要修改的年龄");
+                                int alterage=sc.nextInt();
+                                student.setAge(alterage);
+                                break;
+                            case 3 :
+                                System.out.println("请输入要修改的成绩");
+                                double alterscore=sc.nextDouble();
+                                student.setScore(alterscore);
+                                break;
+                            default:
+                                System.out.println("请输入正确的数字");
+                         }
+                        }
+                    }
                 break;
                 case 5: System.out.println("删除学生");
                     System.out.println("请输入要删除学生的学号");
@@ -61,9 +100,11 @@ public class Main {
                     for (int d=0;d<list.size();d++){
                         if (list.get(d).getStudentcode()==removenumber){
                             list.remove(d);
+                            System.out.println("学生已删除");
                             break;
                         }
                     }
+                    break;
                 case 0: System.exit(0); break;
                 default: System.out.println("请重新输入"); break;
             }
